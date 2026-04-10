@@ -1,0 +1,46 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFramework>net10.0</TargetFramework>
+    <ImplicitUsings>enable</ImplicitUsings>
+    <Nullable>enable</Nullable>
+    <GenerateDocumentationFile>true</GenerateDocumentationFile>
+
+    <!-- NuGet Metadata -->
+    <PackageId>Egov.Integrations.ClientAuthentication</PackageId>
+    <Version>10.0.0</Version>
+    <Authors>egov.md</Authors>
+    <Company>egov.md</Company>
+    <Description>A reusable library for client authentication and information retrieval based on HTTP headers from reverse proxies (Ingress). Supports certificate-based client identification and metadata retrieval.</Description>
+    <PackageTags>egov;authentication;ingress;client-authentication;aspnetcore</PackageTags>
+    <PackageProjectUrl>https://github.com/egov-moldova/Egov.Integrations.ClientAuthentication</PackageProjectUrl>
+    <RepositoryUrl>https://github.com/egov-moldova/Egov.Integrations.ClientAuthentication.git</RepositoryUrl>
+    <RepositoryType>git</RepositoryType>
+    <PackageLicenseExpression>MIT</PackageLicenseExpression>
+    <PackageReadmeFile>README.md</PackageReadmeFile>
+    <PackageIcon>MPass.png</PackageIcon>
+    <PublishRepositoryUrl>true</PublishRepositoryUrl>
+    <IncludeSymbols>true</IncludeSymbols>
+    <SymbolPackageFormat>snupkg</SymbolPackageFormat>
+    <EmbedUntrackedSources>true</EmbedUntrackedSources>
+    <Deterministic>true</Deterministic>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <None Include="..\..\README.md" Pack="true" PackagePath="\" />
+    <None Include="..\..\files\MPass.png" Pack="true" PackagePath="\" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <FrameworkReference Include="Microsoft.AspNetCore.App" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <PackageReference Include="Egov.Extensions.Configuration" Version="10.0.4" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <InternalsVisibleTo Include="Egov.Integrations.ClientAuthentication.Tests" />
+    <InternalsVisibleTo Include="DynamicProxyGenAssembly2" />
+  </ItemGroup>
+</Project>
